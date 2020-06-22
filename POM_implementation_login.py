@@ -12,12 +12,14 @@ class LoginTest(unittest.TestCase):
     def setUpClass(cls):
         logging.warning("setting up HRM login test case")
         cls.driver = webdriver.Chrome(executable_path="C:\chromedriver_win32\chromedriver")
+         cls.driver.get_screenshot_as_file("C:\chromedriver_win32\screen.png")
         cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
 
     def test_login_valid(self):
         driver=self.driver
         driver.get('https://opensource-demo.orangehrmlive.com/')
+         cls.driver.get_screenshot_as_file("C:\chromedriver_win32\screen1.png")
         login=LoginPage(driver)
         login.enter_username("Admin")
         login.enter_password("admin123")
