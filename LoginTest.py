@@ -4,7 +4,7 @@ from selenium import webdriver
 import time
 import sys
 sys.path.append("C:/Users/Narayana/PycharmProjects/SeleniumPython")
-from pageObjects.LoginPage import LoginPage
+from LoginPage import LoginPage
 
 class LoginTest(unittest.TestCase):
     baseURL="https://admin-demo.nopcommerce.com/"
