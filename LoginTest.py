@@ -3,7 +3,7 @@ import HtmlTestRunner
 from selenium import webdriver
 import time
 import sys
-
+#to get the POM LoginPage class
 sys.path.append("C:/Users/Narayana/PycharmProjects/SeleniumPython")
 from LoginPage import LoginPage
 
