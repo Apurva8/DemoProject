@@ -26,4 +26,4 @@ class OrangeHRMTest(unittest.TestCase):
         logger.debug("Tests Completed....")
 
 if __name__=='__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:\\Users\\Narayana\\PycharmProjects\\SeleniumPython\\Practice\\TestCaseReports"))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="..\\TestCaseReports"))
