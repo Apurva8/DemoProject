@@ -2,6 +2,7 @@ from selenium import webdriver
 import time
 import unittest
 import logging
+import HtmlTestRunner
 from loginPage import LoginPage
 from HomePage import HomePage
 
@@ -37,4 +38,4 @@ class LoginTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/Users/Adarsh/.PyCharmCE2018.3/config/scratches/reports"))
