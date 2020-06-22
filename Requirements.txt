@@ -1,4 +1,4 @@
-# Requirements needed when generating releases. See BUILD.rst for details.
+# Requirements needed when generating releases. 
 selenium
 chromedriver-autoinstaller
 loguru
