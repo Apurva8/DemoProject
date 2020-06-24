@@ -5,7 +5,6 @@ Library  SeleniumLibrary
 ${BROWSER}  chrome
 ${LOGIN URL}  https://admin-demo.nopcommerce.com
 
-
 *** Keywords ***
 Open my Browser
     open browser    ${LOGIN URL}    ${BROWSER}
