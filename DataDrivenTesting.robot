@@ -1,6 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource    ../Login_resources.robot
+Resource    ../RobotFramework/Login_resources.robot
 Suite Setup  Open my Browser
 Suite Teardown  Close browsers
 Test Setup  log to console  Execution of test case
