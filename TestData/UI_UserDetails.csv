@@ -1,0 +1,2 @@
+TestCaseName;${email};${password};${first};${last};${day};${month};${year};${category};${item};
+Login using Credentials;admin3@gmail.com;Admin123;Harini;Yadav;23;August;1995;Computers;Desktops;
