@@ -1,0 +1,1360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 3.2.1 (Python 3.8.3 on win32)" generated="20200710 11:43:53.679" rpa="false">
+<suite id="s1" name="UI DEMO" source="C:\Users\HOME\PycharmProjects\Training\UI_DEMO">
+<suite id="s1-s1" name="InvaliLogin" source="C:\Users\HOME\PycharmProjects\Training\UI_DEMO\InvaliLogin.robot">
+<kw name="Open my Browser" library="Resources" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200710 11:42:47.337" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20200710 11:42:47.337" endtime="20200710 11:42:58.348"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:47.322" endtime="20200710 11:42:58.349"></status>
+</kw>
+<kw name="Close browsers" library="Resources" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200710 11:43:50.044" endtime="20200710 11:43:53.106"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:50.044" endtime="20200710 11:43:53.106"></status>
+</kw>
+<test id="s1-s1-t1" name="Login with user admin@yourstore.com and password">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Started execution of test case</arg>
+</arguments>
+<msg timestamp="20200710 11:42:58.353" level="INFO">Started execution of test case</msg>
+<status status="PASS" starttime="20200710 11:42:58.352" endtime="20200710 11:42:58.353"></status>
+</kw>
+<kw name="Invalid Login">
+<arguments>
+<arg>admin@yourstore.com</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>&lt;a href="../TestData/UI_InvalidUsers.csv"&gt;Input Data File&lt;a&gt;</arg>
+<arg>html=True</arg>
+</arguments>
+<msg timestamp="20200710 11:42:58.356" level="INFO" html="yes">&lt;a href="../TestData/UI_InvalidUsers.csv"&gt;Input Data File&lt;a&gt;</msg>
+<status status="PASS" starttime="20200710 11:42:58.355" endtime="20200710 11:42:58.356"></status>
+</kw>
+<kw name="Set Implicit Time" library="Resources">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200710 11:42:58.358" endtime="20200710 11:42:58.368"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:58.357" endtime="20200710 11:42:58.368"></status>
+</kw>
+<kw name="Go to Loginpage" library="Resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>class:ico-login</arg>
+</arguments>
+<msg timestamp="20200710 11:42:58.370" level="INFO">Clicking link 'class:ico-login'.</msg>
+<status status="PASS" starttime="20200710 11:42:58.369" endtime="20200710 11:43:02.516"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:04.527" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:02.516" endtime="20200710 11:43:04.527"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:58.368" endtime="20200710 11:43:04.527"></status>
+</kw>
+<kw name="Input Email" library="Resources">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:Email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:04.527" level="INFO">Typing text 'admin@yourstore.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20200710 11:43:04.527" endtime="20200710 11:43:05.630"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:04.527" endtime="20200710 11:43:05.631"></status>
+</kw>
+<kw name="Input Password" library="Resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:Password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:05.636" level="INFO">Typing text '' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20200710 11:43:05.635" endtime="20200710 11:43:06.454"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:05.632" endtime="20200710 11:43:06.455"></status>
+</kw>
+<kw name="Log in" library="Resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@class="button-1 login-button"]</arg>
+</arguments>
+<msg timestamp="20200710 11:43:06.460" level="INFO">Clicking element 'xpath://input[@class="button-1 login-button"]'.</msg>
+<status status="PASS" starttime="20200710 11:43:06.457" endtime="20200710 11:43:10.174"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:12.176" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:10.175" endtime="20200710 11:43:12.176"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:06.455" endtime="20200710 11:43:12.177"></status>
+</kw>
+<kw name="Error message should be visible" library="Resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login was unsuccessful</arg>
+</arguments>
+<msg timestamp="20200710 11:43:12.289" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
+<status status="PASS" starttime="20200710 11:43:12.178" endtime="20200710 11:43:12.289"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:12.177" endtime="20200710 11:43:12.290"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:58.354" endtime="20200710 11:43:12.290"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Completion of executing the test case</arg>
+</arguments>
+<msg timestamp="20200710 11:43:12.292" level="INFO">Completion of executing the test case</msg>
+<status status="PASS" starttime="20200710 11:43:12.291" endtime="20200710 11:43:12.292"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:58.349" endtime="20200710 11:43:12.292" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Login with user admin1@yourstore.com and password">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Started execution of test case</arg>
+</arguments>
+<msg timestamp="20200710 11:43:12.297" level="INFO">Started execution of test case</msg>
+<status status="PASS" starttime="20200710 11:43:12.296" endtime="20200710 11:43:12.297"></status>
+</kw>
+<kw name="Invalid Login">
+<arguments>
+<arg>admin1@yourstore.com</arg>
+<arg>xyz</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>&lt;a href="../TestData/UI_InvalidUsers.csv"&gt;Input Data File&lt;a&gt;</arg>
+<arg>html=True</arg>
+</arguments>
+<msg timestamp="20200710 11:43:12.300" level="INFO" html="yes">&lt;a href="../TestData/UI_InvalidUsers.csv"&gt;Input Data File&lt;a&gt;</msg>
+<status status="PASS" starttime="20200710 11:43:12.299" endtime="20200710 11:43:12.300"></status>
+</kw>
+<kw name="Set Implicit Time" library="Resources">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200710 11:43:12.301" endtime="20200710 11:43:12.308"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:12.300" endtime="20200710 11:43:12.308"></status>
+</kw>
+<kw name="Go to Loginpage" library="Resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>class:ico-login</arg>
+</arguments>
+<msg timestamp="20200710 11:43:12.311" level="INFO">Clicking link 'class:ico-login'.</msg>
+<status status="PASS" starttime="20200710 11:43:12.309" endtime="20200710 11:43:13.443"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:15.447" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:13.444" endtime="20200710 11:43:15.447"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:12.308" endtime="20200710 11:43:15.448"></status>
+</kw>
+<kw name="Input Email" library="Resources">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:Email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:15.451" level="INFO">Typing text 'admin1@yourstore.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20200710 11:43:15.450" endtime="20200710 11:43:16.124"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:15.448" endtime="20200710 11:43:16.125"></status>
+</kw>
+<kw name="Input Password" library="Resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:Password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:16.130" level="INFO">Typing text 'xyz' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20200710 11:43:16.129" endtime="20200710 11:43:16.566"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:16.126" endtime="20200710 11:43:16.567"></status>
+</kw>
+<kw name="Log in" library="Resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@class="button-1 login-button"]</arg>
+</arguments>
+<msg timestamp="20200710 11:43:16.569" level="INFO">Clicking element 'xpath://input[@class="button-1 login-button"]'.</msg>
+<status status="PASS" starttime="20200710 11:43:16.568" endtime="20200710 11:43:19.706"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:21.708" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:19.706" endtime="20200710 11:43:21.709"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:16.567" endtime="20200710 11:43:21.712"></status>
+</kw>
+<kw name="Error message should be visible" library="Resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login was unsuccessful</arg>
+</arguments>
+<msg timestamp="20200710 11:43:21.788" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
+<status status="PASS" starttime="20200710 11:43:21.717" endtime="20200710 11:43:21.788"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:21.713" endtime="20200710 11:43:21.789"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:12.298" endtime="20200710 11:43:21.790"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Completion of executing the test case</arg>
+</arguments>
+<msg timestamp="20200710 11:43:21.792" level="INFO">Completion of executing the test case</msg>
+<status status="PASS" starttime="20200710 11:43:21.791" endtime="20200710 11:43:21.793"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:12.293" endtime="20200710 11:43:21.793" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Login with user adm@yourstore.com and password">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Started execution of test case</arg>
+</arguments>
+<msg timestamp="20200710 11:43:21.803" level="INFO">Started execution of test case</msg>
+<status status="PASS" starttime="20200710 11:43:21.802" endtime="20200710 11:43:21.803"></status>
+</kw>
+<kw name="Invalid Login">
+<arguments>
+<arg>adm@yourstore.com</arg>
+<arg>admin</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>&lt;a href="../TestData/UI_InvalidUsers.csv"&gt;Input Data File&lt;a&gt;</arg>
+<arg>html=True</arg>
+</arguments>
+<msg timestamp="20200710 11:43:21.808" level="INFO" html="yes">&lt;a href="../TestData/UI_InvalidUsers.csv"&gt;Input Data File&lt;a&gt;</msg>
+<status status="PASS" starttime="20200710 11:43:21.807" endtime="20200710 11:43:21.809"></status>
+</kw>
+<kw name="Set Implicit Time" library="Resources">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200710 11:43:21.812" endtime="20200710 11:43:21.822"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:21.809" endtime="20200710 11:43:21.823"></status>
+</kw>
+<kw name="Go to Loginpage" library="Resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>class:ico-login</arg>
+</arguments>
+<msg timestamp="20200710 11:43:21.825" level="INFO">Clicking link 'class:ico-login'.</msg>
+<status status="PASS" starttime="20200710 11:43:21.825" endtime="20200710 11:43:23.964"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:25.966" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:23.965" endtime="20200710 11:43:25.966"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:21.824" endtime="20200710 11:43:25.967"></status>
+</kw>
+<kw name="Input Email" library="Resources">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:Email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:25.972" level="INFO">Typing text 'adm@yourstore.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20200710 11:43:25.970" endtime="20200710 11:43:26.860"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:25.968" endtime="20200710 11:43:26.862"></status>
+</kw>
+<kw name="Input Password" library="Resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:Password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:26.866" level="INFO">Typing text 'admin' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20200710 11:43:26.865" endtime="20200710 11:43:27.485"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:26.863" endtime="20200710 11:43:27.486"></status>
+</kw>
+<kw name="Log in" library="Resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@class="button-1 login-button"]</arg>
+</arguments>
+<msg timestamp="20200710 11:43:27.490" level="INFO">Clicking element 'xpath://input[@class="button-1 login-button"]'.</msg>
+<status status="PASS" starttime="20200710 11:43:27.489" endtime="20200710 11:43:29.209"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:31.212" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:29.209" endtime="20200710 11:43:31.213"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:27.487" endtime="20200710 11:43:31.214"></status>
+</kw>
+<kw name="Error message should be visible" library="Resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login was unsuccessful</arg>
+</arguments>
+<msg timestamp="20200710 11:43:31.267" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
+<status status="PASS" starttime="20200710 11:43:31.217" endtime="20200710 11:43:31.268"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:31.214" endtime="20200710 11:43:31.268"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:21.804" endtime="20200710 11:43:31.269"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Completion of executing the test case</arg>
+</arguments>
+<msg timestamp="20200710 11:43:31.270" level="INFO">Completion of executing the test case</msg>
+<status status="PASS" starttime="20200710 11:43:31.270" endtime="20200710 11:43:31.270"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:21.797" endtime="20200710 11:43:31.271" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="Login with user admi@yourstore.com and password">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Started execution of test case</arg>
+</arguments>
+<msg timestamp="20200710 11:43:31.275" level="INFO">Started execution of test case</msg>
+<status status="PASS" starttime="20200710 11:43:31.274" endtime="20200710 11:43:31.275"></status>
+</kw>
+<kw name="Invalid Login">
+<arguments>
+<arg>admi@yourstore.com</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>&lt;a href="../TestData/UI_InvalidUsers.csv"&gt;Input Data File&lt;a&gt;</arg>
+<arg>html=True</arg>
+</arguments>
+<msg timestamp="20200710 11:43:31.279" level="INFO" html="yes">&lt;a href="../TestData/UI_InvalidUsers.csv"&gt;Input Data File&lt;a&gt;</msg>
+<status status="PASS" starttime="20200710 11:43:31.278" endtime="20200710 11:43:31.280"></status>
+</kw>
+<kw name="Set Implicit Time" library="Resources">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200710 11:43:31.284" endtime="20200710 11:43:31.295"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:31.281" endtime="20200710 11:43:31.296"></status>
+</kw>
+<kw name="Go to Loginpage" library="Resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>class:ico-login</arg>
+</arguments>
+<msg timestamp="20200710 11:43:31.300" level="INFO">Clicking link 'class:ico-login'.</msg>
+<status status="PASS" starttime="20200710 11:43:31.299" endtime="20200710 11:43:32.922"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:34.925" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:32.923" endtime="20200710 11:43:34.926"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:31.297" endtime="20200710 11:43:34.927"></status>
+</kw>
+<kw name="Input Email" library="Resources">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:Email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:34.930" level="INFO">Typing text 'admi@yourstore.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20200710 11:43:34.929" endtime="20200710 11:43:35.796"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:34.927" endtime="20200710 11:43:35.797"></status>
+</kw>
+<kw name="Input Password" library="Resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:Password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:35.801" level="INFO">Typing text '' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20200710 11:43:35.800" endtime="20200710 11:43:36.320"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:35.798" endtime="20200710 11:43:36.321"></status>
+</kw>
+<kw name="Log in" library="Resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@class="button-1 login-button"]</arg>
+</arguments>
+<msg timestamp="20200710 11:43:36.323" level="INFO">Clicking element 'xpath://input[@class="button-1 login-button"]'.</msg>
+<status status="PASS" starttime="20200710 11:43:36.322" endtime="20200710 11:43:38.801"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:40.807" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:38.802" endtime="20200710 11:43:40.807"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:36.321" endtime="20200710 11:43:40.807"></status>
+</kw>
+<kw name="Error message should be visible" library="Resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login was unsuccessful</arg>
+</arguments>
+<msg timestamp="20200710 11:43:40.853" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
+<status status="PASS" starttime="20200710 11:43:40.807" endtime="20200710 11:43:40.853"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:40.807" endtime="20200710 11:43:40.853"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:31.276" endtime="20200710 11:43:40.853"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Completion of executing the test case</arg>
+</arguments>
+<msg timestamp="20200710 11:43:40.853" level="INFO">Completion of executing the test case</msg>
+<status status="PASS" starttime="20200710 11:43:40.853" endtime="20200710 11:43:40.853"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:31.272" endtime="20200710 11:43:40.853" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="Login with user ad@yourstore.com and password">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Started execution of test case</arg>
+</arguments>
+<msg timestamp="20200710 11:43:40.869" level="INFO">Started execution of test case</msg>
+<status status="PASS" starttime="20200710 11:43:40.869" endtime="20200710 11:43:40.869"></status>
+</kw>
+<kw name="Invalid Login">
+<arguments>
+<arg>ad@yourstore.com</arg>
+<arg>xyz</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>&lt;a href="../TestData/UI_InvalidUsers.csv"&gt;Input Data File&lt;a&gt;</arg>
+<arg>html=True</arg>
+</arguments>
+<msg timestamp="20200710 11:43:40.869" level="INFO" html="yes">&lt;a href="../TestData/UI_InvalidUsers.csv"&gt;Input Data File&lt;a&gt;</msg>
+<status status="PASS" starttime="20200710 11:43:40.869" endtime="20200710 11:43:40.869"></status>
+</kw>
+<kw name="Set Implicit Time" library="Resources">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200710 11:43:40.869" endtime="20200710 11:43:40.885"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:40.869" endtime="20200710 11:43:40.885"></status>
+</kw>
+<kw name="Go to Loginpage" library="Resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>class:ico-login</arg>
+</arguments>
+<msg timestamp="20200710 11:43:40.885" level="INFO">Clicking link 'class:ico-login'.</msg>
+<status status="PASS" starttime="20200710 11:43:40.885" endtime="20200710 11:43:42.909"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:44.925" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:42.910" endtime="20200710 11:43:44.925"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:40.885" endtime="20200710 11:43:44.925"></status>
+</kw>
+<kw name="Input Email" library="Resources">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:Email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:44.925" level="INFO">Typing text 'ad@yourstore.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20200710 11:43:44.925" endtime="20200710 11:43:45.400"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:44.925" endtime="20200710 11:43:45.401"></status>
+</kw>
+<kw name="Input Password" library="Resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:Password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:45.404" level="INFO">Typing text 'xyz' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20200710 11:43:45.404" endtime="20200710 11:43:45.773"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:45.402" endtime="20200710 11:43:45.774"></status>
+</kw>
+<kw name="Log in" library="Resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@class="button-1 login-button"]</arg>
+</arguments>
+<msg timestamp="20200710 11:43:45.778" level="INFO">Clicking element 'xpath://input[@class="button-1 login-button"]'.</msg>
+<status status="PASS" starttime="20200710 11:43:45.776" endtime="20200710 11:43:47.978"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:49.981" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:47.979" endtime="20200710 11:43:49.981"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:45.774" endtime="20200710 11:43:49.981"></status>
+</kw>
+<kw name="Error message should be visible" library="Resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login was unsuccessful</arg>
+</arguments>
+<msg timestamp="20200710 11:43:50.028" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
+<status status="PASS" starttime="20200710 11:43:49.981" endtime="20200710 11:43:50.028"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:49.981" endtime="20200710 11:43:50.028"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:40.869" endtime="20200710 11:43:50.028"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Completion of executing the test case</arg>
+</arguments>
+<msg timestamp="20200710 11:43:50.028" level="INFO">Completion of executing the test case</msg>
+<status status="PASS" starttime="20200710 11:43:50.028" endtime="20200710 11:43:50.028"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:40.853" endtime="20200710 11:43:50.028" critical="yes"></status>
+</test>
+<doc>This test will valid the login using invalid components</doc>
+<status status="PASS" starttime="20200710 11:42:46.384" endtime="20200710 11:43:53.106"></status>
+</suite>
+<suite id="s1-s2" name="Registration" source="C:\Users\HOME\PycharmProjects\Training\UI_DEMO\Registration.robot">
+<kw name="Open my Browser" library="Resources" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200710 11:42:47.291" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20200710 11:42:47.291" endtime="20200710 11:42:58.659"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:47.291" endtime="20200710 11:42:58.661"></status>
+</kw>
+<kw name="Close browsers" library="Resources" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200710 11:43:38.959" endtime="20200710 11:43:43.170"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:38.958" endtime="20200710 11:43:43.171"></status>
+</kw>
+<test id="s1-s2-t1" name="Register with user Harini">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Started execution of test case</arg>
+</arguments>
+<msg timestamp="20200710 11:42:58.665" level="INFO">Started execution of test case</msg>
+<status status="PASS" starttime="20200710 11:42:58.664" endtime="20200710 11:42:58.666"></status>
+</kw>
+<kw name="Registration Test">
+<arguments>
+<arg>admin3@gmail.com</arg>
+<arg>Admin123</arg>
+<arg>Harini</arg>
+<arg>Yadav</arg>
+<arg>23</arg>
+<arg>August</arg>
+<arg>1995</arg>
+<arg>Computers</arg>
+<arg>Desktops</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>&lt;a href="../TestData/UI_UserDetails.csv"&gt;Input Data File&lt;a&gt;</arg>
+<arg>html=True</arg>
+</arguments>
+<msg timestamp="20200710 11:42:58.669" level="INFO" html="yes">&lt;a href="../TestData/UI_UserDetails.csv"&gt;Input Data File&lt;a&gt;</msg>
+<status status="PASS" starttime="20200710 11:42:58.668" endtime="20200710 11:42:58.669"></status>
+</kw>
+<kw name="Set Implicit Time" library="Resources">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200710 11:42:58.670" endtime="20200710 11:42:58.684"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:58.669" endtime="20200710 11:42:58.685"></status>
+</kw>
+<kw name="Go to Loginpage" library="Resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>class:ico-login</arg>
+</arguments>
+<msg timestamp="20200710 11:42:58.687" level="INFO">Clicking link 'class:ico-login'.</msg>
+<status status="PASS" starttime="20200710 11:42:58.686" endtime="20200710 11:43:02.516"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:04.527" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:02.517" endtime="20200710 11:43:04.527"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:58.685" endtime="20200710 11:43:04.527"></status>
+</kw>
+<kw name="Register" library="Resources">
+<arguments>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<arg>${first}</arg>
+<arg>${last}</arg>
+<arg>${day}</arg>
+<arg>${month}</arg>
+<arg>${year}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@class="button-1 register-button"]</arg>
+</arguments>
+<msg timestamp="20200710 11:43:04.527" level="INFO">Clicking element 'xpath://input[@class="button-1 register-button"]'.</msg>
+<status status="PASS" starttime="20200710 11:43:04.527" endtime="20200710 11:43:06.030"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:gender-female</arg>
+</arguments>
+<msg timestamp="20200710 11:43:06.033" level="INFO">Clicking element 'id:gender-female'.</msg>
+<status status="PASS" starttime="20200710 11:43:06.031" endtime="20200710 11:43:06.403"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:FirstName</arg>
+<arg>${first}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:06.405" level="INFO">Typing text 'Harini' into text field 'id:FirstName'.</msg>
+<status status="PASS" starttime="20200710 11:43:06.404" endtime="20200710 11:43:07.414"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:LastName</arg>
+<arg>${last}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:07.416" level="INFO">Typing text 'Yadav' into text field 'id:LastName'.</msg>
+<status status="PASS" starttime="20200710 11:43:07.415" endtime="20200710 11:43:07.930"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>DateOfBirthDay</arg>
+<arg>${day}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:07.932" level="INFO">Selecting options from selection list 'DateOfBirthDay' by label 23.</msg>
+<status status="PASS" starttime="20200710 11:43:07.931" endtime="20200710 11:43:08.252"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>DateOfBirthMonth</arg>
+<arg>${month}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:08.254" level="INFO">Selecting options from selection list 'DateOfBirthMonth' by label August.</msg>
+<status status="PASS" starttime="20200710 11:43:08.253" endtime="20200710 11:43:08.570"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>DateOfBirthYear</arg>
+<arg>${year}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:08.572" level="INFO">Selecting options from selection list 'DateOfBirthYear' by label 1995.</msg>
+<status status="PASS" starttime="20200710 11:43:08.571" endtime="20200710 11:43:08.946"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:Email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:08.949" level="INFO">Typing text 'admin3@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20200710 11:43:08.947" endtime="20200710 11:43:10.176"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:Newsletter</arg>
+</arguments>
+<msg timestamp="20200710 11:43:10.180" level="INFO">Clicking element 'id:Newsletter'.</msg>
+<status status="PASS" starttime="20200710 11:43:10.179" endtime="20200710 11:43:10.471"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:Password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:10.472" level="INFO">Typing text 'Admin123' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20200710 11:43:10.471" endtime="20200710 11:43:11.076"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:ConfirmPassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:11.079" level="INFO">Typing text 'Admin123' into text field 'id:ConfirmPassword'.</msg>
+<status status="PASS" starttime="20200710 11:43:11.078" endtime="20200710 11:43:11.779"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:register-button</arg>
+</arguments>
+<msg timestamp="20200710 11:43:11.781" level="INFO">Clicking element 'id:register-button'.</msg>
+<status status="PASS" starttime="20200710 11:43:11.780" endtime="20200710 11:43:14.554"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Your registration completed</arg>
+</arguments>
+<msg timestamp="20200710 11:43:14.653" level="INFO">Current page contains text 'Your registration completed'.</msg>
+<status status="PASS" starttime="20200710 11:43:14.555" endtime="20200710 11:43:14.653"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>name:register-continue</arg>
+</arguments>
+<msg timestamp="20200710 11:43:14.655" level="INFO">Clicking element 'name:register-continue'.</msg>
+<status status="PASS" starttime="20200710 11:43:14.654" endtime="20200710 11:43:18.341"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:04.527" endtime="20200710 11:43:18.342"></status>
+</kw>
+<kw name="Search Item" library="Resources">
+<arguments>
+<arg>${category}</arg>
+<arg>${item}</arg>
+</arguments>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>link:${category}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:18.348" level="INFO">Simulating Mouse Over on element 'link:Computers'.</msg>
+<status status="PASS" starttime="20200710 11:43:18.346" endtime="20200710 11:43:19.051"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>link:${item}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:19.052" level="INFO">Simulating Mouse Over on element 'link:Desktops'.</msg>
+<status status="PASS" starttime="20200710 11:43:19.051" endtime="20200710 11:43:19.561"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>link:${item}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:19.563" level="INFO">Clicking link 'link:Desktops'.</msg>
+<status status="PASS" starttime="20200710 11:43:19.562" endtime="20200710 11:43:21.679"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>nopCommerce demo store. ${item}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:21.726" level="INFO">Page title is 'nopCommerce demo store. Desktops'.</msg>
+<status status="PASS" starttime="20200710 11:43:21.679" endtime="20200710 11:43:21.726"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:18.342" endtime="20200710 11:43:21.728"></status>
+</kw>
+<kw name="Place Filters" library="Resources">
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>products-orderby</arg>
+<arg>4</arg>
+</arguments>
+<msg timestamp="20200710 11:43:21.732" level="INFO">Selecting options from selection list 'products-orderby' by index 4.</msg>
+<status status="PASS" starttime="20200710 11:43:21.731" endtime="20200710 11:43:24.015"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:26.017" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:24.016" endtime="20200710 11:43:26.018"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>products-orderby</arg>
+<arg>Name: A to Z</arg>
+</arguments>
+<msg timestamp="20200710 11:43:26.019" level="INFO">Selecting options from selection list 'products-orderby' by label Name: A to Z.</msg>
+<status status="PASS" starttime="20200710 11:43:26.018" endtime="20200710 11:43:27.739"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:29.741" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:27.739" endtime="20200710 11:43:29.741"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>products-pagesize</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20200710 11:43:29.743" level="INFO">Selecting options from selection list 'products-pagesize' by index 0.</msg>
+<status status="PASS" starttime="20200710 11:43:29.742" endtime="20200710 11:43:31.300"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:21.729" endtime="20200710 11:43:31.301"></status>
+</kw>
+<kw name="Going to cart" library="Resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="topcartlink"]/a</arg>
+</arguments>
+<msg timestamp="20200710 11:43:31.305" level="INFO">Clicking link 'xpath://*[@id="topcartlink"]/a'.</msg>
+<status status="PASS" starttime="20200710 11:43:31.304" endtime="20200710 11:43:32.921"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>nopCommerce demo store. Shopping Cart</arg>
+</arguments>
+<msg timestamp="20200710 11:43:32.941" level="INFO">Page title is 'nopCommerce demo store. Shopping Cart'.</msg>
+<status status="PASS" starttime="20200710 11:43:32.921" endtime="20200710 11:43:32.942"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:34.945" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:32.942" endtime="20200710 11:43:34.945"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:31.302" endtime="20200710 11:43:34.946"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:58.666" endtime="20200710 11:43:34.947"></status>
+</kw>
+<kw name="Log out" library="Resources" type="teardown">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>class:ico-logout</arg>
+</arguments>
+<msg timestamp="20200710 11:43:34.951" level="INFO">Clicking link 'class:ico-logout'.</msg>
+<status status="PASS" starttime="20200710 11:43:34.950" endtime="20200710 11:43:36.931"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:38.932" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:36.932" endtime="20200710 11:43:38.932"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>nopCommerce demo store</arg>
+</arguments>
+<msg timestamp="20200710 11:43:38.951" level="INFO">Page title is 'nopCommerce demo store'.</msg>
+<status status="PASS" starttime="20200710 11:43:38.933" endtime="20200710 11:43:38.952"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:34.948" endtime="20200710 11:43:38.953"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:58.662" endtime="20200710 11:43:38.953" critical="yes"></status>
+</test>
+<doc>This test will register the new user with the given details</doc>
+<status status="PASS" starttime="20200710 11:42:46.369" endtime="20200710 11:43:43.171"></status>
+</suite>
+<suite id="s1-s3" name="SearchDemo" source="C:\Users\HOME\PycharmProjects\Training\UI_DEMO\SearchDemo.robot">
+<kw name="Open my Browser" library="Resources" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200710 11:42:47.337" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20200710 11:42:47.337" endtime="20200710 11:42:58.493"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:47.337" endtime="20200710 11:42:58.494"></status>
+</kw>
+<kw name="Close browsers" library="Resources" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200710 11:43:37.188" endtime="20200710 11:43:41.870"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:37.187" endtime="20200710 11:43:41.870"></status>
+</kw>
+<test id="s1-s3-t1" name="Search for items of Electronics and Cell phones">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Started execution of test case</arg>
+</arguments>
+<msg timestamp="20200710 11:42:58.500" level="INFO">Started execution of test case</msg>
+<status status="PASS" starttime="20200710 11:42:58.499" endtime="20200710 11:42:58.500"></status>
+</kw>
+<kw name="Search items">
+<arguments>
+<arg>Electronics</arg>
+<arg>Cell phones</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>&lt;a href="../TestData/UI_Items.csv"&gt;Input Data File&lt;a&gt;</arg>
+<arg>html=True</arg>
+</arguments>
+<msg timestamp="20200710 11:42:58.503" level="INFO" html="yes">&lt;a href="../TestData/UI_Items.csv"&gt;Input Data File&lt;a&gt;</msg>
+<status status="PASS" starttime="20200710 11:42:58.502" endtime="20200710 11:42:58.503"></status>
+</kw>
+<kw name="Set Implicit Time" library="Resources">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200710 11:42:58.505" endtime="20200710 11:42:58.518"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:58.504" endtime="20200710 11:42:58.518"></status>
+</kw>
+<kw name="Search Item" library="Resources">
+<arguments>
+<arg>${category}</arg>
+<arg>${item}</arg>
+</arguments>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>link:${category}</arg>
+</arguments>
+<msg timestamp="20200710 11:42:58.521" level="INFO">Simulating Mouse Over on element 'link:Electronics'.</msg>
+<status status="PASS" starttime="20200710 11:42:58.520" endtime="20200710 11:42:59.437"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>link:${item}</arg>
+</arguments>
+<msg timestamp="20200710 11:42:59.438" level="INFO">Simulating Mouse Over on element 'link:Cell phones'.</msg>
+<status status="PASS" starttime="20200710 11:42:59.437" endtime="20200710 11:42:59.856"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>link:${item}</arg>
+</arguments>
+<msg timestamp="20200710 11:42:59.857" level="INFO">Clicking link 'link:Cell phones'.</msg>
+<status status="PASS" starttime="20200710 11:42:59.856" endtime="20200710 11:43:04.048"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>nopCommerce demo store. ${item}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:04.079" level="INFO">Page title is 'nopCommerce demo store. Cell phones'.</msg>
+<status status="PASS" starttime="20200710 11:43:04.049" endtime="20200710 11:43:04.079"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:58.519" endtime="20200710 11:43:04.080"></status>
+</kw>
+<kw name="Place Filters" library="Resources">
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>products-orderby</arg>
+<arg>4</arg>
+</arguments>
+<msg timestamp="20200710 11:43:04.083" level="INFO">Selecting options from selection list 'products-orderby' by index 4.</msg>
+<status status="PASS" starttime="20200710 11:43:04.083" endtime="20200710 11:43:06.940"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:08.943" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:06.941" endtime="20200710 11:43:08.943"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>products-orderby</arg>
+<arg>Name: A to Z</arg>
+</arguments>
+<msg timestamp="20200710 11:43:08.945" level="INFO">Selecting options from selection list 'products-orderby' by label Name: A to Z.</msg>
+<status status="PASS" starttime="20200710 11:43:08.944" endtime="20200710 11:43:11.737"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:13.738" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:11.737" endtime="20200710 11:43:13.738"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>products-pagesize</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20200710 11:43:13.740" level="INFO">Selecting options from selection list 'products-pagesize' by index 0.</msg>
+<status status="PASS" starttime="20200710 11:43:13.739" endtime="20200710 11:43:15.578"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:04.081" endtime="20200710 11:43:15.579"></status>
+</kw>
+<kw name="Going to cart" library="Resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="topcartlink"]/a</arg>
+</arguments>
+<msg timestamp="20200710 11:43:15.583" level="INFO">Clicking link 'xpath://*[@id="topcartlink"]/a'.</msg>
+<status status="PASS" starttime="20200710 11:43:15.582" endtime="20200710 11:43:17.268"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>nopCommerce demo store. Shopping Cart</arg>
+</arguments>
+<msg timestamp="20200710 11:43:17.341" level="INFO">Page title is 'nopCommerce demo store. Shopping Cart'.</msg>
+<status status="PASS" starttime="20200710 11:43:17.268" endtime="20200710 11:43:17.342"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:19.344" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:17.343" endtime="20200710 11:43:19.344"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:15.580" endtime="20200710 11:43:19.345"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:58.501" endtime="20200710 11:43:19.345"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Completion of executing the test case</arg>
+</arguments>
+<msg timestamp="20200710 11:43:19.347" level="INFO">Completion of executing the test case</msg>
+<status status="PASS" starttime="20200710 11:43:19.346" endtime="20200710 11:43:19.347"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:42:58.495" endtime="20200710 11:43:19.347" critical="yes"></status>
+</test>
+<test id="s1-s3-t2" name="Search for items of Apparel and Accessories">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Started execution of test case</arg>
+</arguments>
+<msg timestamp="20200710 11:43:19.352" level="INFO">Started execution of test case</msg>
+<status status="PASS" starttime="20200710 11:43:19.351" endtime="20200710 11:43:19.352"></status>
+</kw>
+<kw name="Search items">
+<arguments>
+<arg>Apparel</arg>
+<arg>Accessories</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>&lt;a href="../TestData/UI_Items.csv"&gt;Input Data File&lt;a&gt;</arg>
+<arg>html=True</arg>
+</arguments>
+<msg timestamp="20200710 11:43:19.355" level="INFO" html="yes">&lt;a href="../TestData/UI_Items.csv"&gt;Input Data File&lt;a&gt;</msg>
+<status status="PASS" starttime="20200710 11:43:19.354" endtime="20200710 11:43:19.355"></status>
+</kw>
+<kw name="Set Implicit Time" library="Resources">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200710 11:43:19.356" endtime="20200710 11:43:19.364"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:19.355" endtime="20200710 11:43:19.365"></status>
+</kw>
+<kw name="Search Item" library="Resources">
+<arguments>
+<arg>${category}</arg>
+<arg>${item}</arg>
+</arguments>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>link:${category}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:19.370" level="INFO">Simulating Mouse Over on element 'link:Apparel'.</msg>
+<status status="PASS" starttime="20200710 11:43:19.369" endtime="20200710 11:43:19.784"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>link:${item}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:19.786" level="INFO">Simulating Mouse Over on element 'link:Accessories'.</msg>
+<status status="PASS" starttime="20200710 11:43:19.786" endtime="20200710 11:43:20.255"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>link:${item}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:20.257" level="INFO">Clicking link 'link:Accessories'.</msg>
+<status status="PASS" starttime="20200710 11:43:20.255" endtime="20200710 11:43:23.552"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>nopCommerce demo store. ${item}</arg>
+</arguments>
+<msg timestamp="20200710 11:43:23.591" level="INFO">Page title is 'nopCommerce demo store. Accessories'.</msg>
+<status status="PASS" starttime="20200710 11:43:23.552" endtime="20200710 11:43:23.592"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:19.366" endtime="20200710 11:43:23.593"></status>
+</kw>
+<kw name="Place Filters" library="Resources">
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>products-orderby</arg>
+<arg>4</arg>
+</arguments>
+<msg timestamp="20200710 11:43:23.597" level="INFO">Selecting options from selection list 'products-orderby' by index 4.</msg>
+<status status="PASS" starttime="20200710 11:43:23.596" endtime="20200710 11:43:26.288"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:28.291" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:26.289" endtime="20200710 11:43:28.291"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>products-orderby</arg>
+<arg>Name: A to Z</arg>
+</arguments>
+<msg timestamp="20200710 11:43:28.292" level="INFO">Selecting options from selection list 'products-orderby' by label Name: A to Z.</msg>
+<status status="PASS" starttime="20200710 11:43:28.291" endtime="20200710 11:43:29.884"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:31.885" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:29.884" endtime="20200710 11:43:31.885"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>products-pagesize</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20200710 11:43:31.887" level="INFO">Selecting options from selection list 'products-pagesize' by index 0.</msg>
+<status status="PASS" starttime="20200710 11:43:31.886" endtime="20200710 11:43:33.672"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:23.594" endtime="20200710 11:43:33.674"></status>
+</kw>
+<kw name="Going to cart" library="Resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="topcartlink"]/a</arg>
+</arguments>
+<msg timestamp="20200710 11:43:33.677" level="INFO">Clicking link 'xpath://*[@id="topcartlink"]/a'.</msg>
+<status status="PASS" starttime="20200710 11:43:33.676" endtime="20200710 11:43:35.134"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>nopCommerce demo store. Shopping Cart</arg>
+</arguments>
+<msg timestamp="20200710 11:43:35.168" level="INFO">Page title is 'nopCommerce demo store. Shopping Cart'.</msg>
+<status status="PASS" starttime="20200710 11:43:35.135" endtime="20200710 11:43:35.168"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200710 11:43:37.169" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200710 11:43:35.169" endtime="20200710 11:43:37.170"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:33.674" endtime="20200710 11:43:37.172"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:19.353" endtime="20200710 11:43:37.173"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Completion of executing the test case</arg>
+</arguments>
+<msg timestamp="20200710 11:43:37.177" level="INFO">Completion of executing the test case</msg>
+<status status="PASS" starttime="20200710 11:43:37.175" endtime="20200710 11:43:37.178"></status>
+</kw>
+<status status="PASS" starttime="20200710 11:43:19.349" endtime="20200710 11:43:37.179" critical="yes"></status>
+</test>
+<doc>This test will search the items</doc>
+<status status="PASS" starttime="20200710 11:42:46.447" endtime="20200710 11:43:41.870"></status>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 3 executions.</doc>
+<status status="PASS" starttime="20200710 11:42:46.244" endtime="20200710 11:43:53.122"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0">Critical Tests</stat>
+<stat pass="8" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" id="s1" name="UI DEMO">UI DEMO</stat>
+<stat pass="5" fail="0" id="s1-s1" name="InvaliLogin">UI DEMO.InvaliLogin</stat>
+<stat pass="1" fail="0" id="s1-s2" name="Registration">UI DEMO.Registration</stat>
+<stat pass="2" fail="0" id="s1-s3" name="SearchDemo">UI DEMO.SearchDemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
