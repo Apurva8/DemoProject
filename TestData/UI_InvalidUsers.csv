@@ -1,6 +1,0 @@
-TestCaseName;${email};${password};
-Right user empty pwd;admin@yourstore.com;${EMPTY};
-Right user wrong pwd;admin1@yourstore.com;xyz;
-Wrong user right pwd;adm@yourstore.com;admin;
-Wrong user empty pwd;admi@yourstore.com;${EMPTY};
-Wrong user wrong pwd;ad@yourstore.com;xyz;   
