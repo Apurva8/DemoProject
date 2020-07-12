@@ -28,7 +28,6 @@ KEYWORD-DRIVEN TESTING is a scripting technique that uses data files to contain 
   > If Python and pip installed, run the below command in command prompt
     ```
     pip install --upgrade robotframework
-   
     ```
    
   > Install the package __robotframework__ in project interpreter settings of current project on Pycharm.
@@ -62,7 +61,6 @@ SeleniumLibrary is a web testing library for Robot Framework that utilizes the S
   > For SeleniumLibrary installation, run the below command in command prompt
     ```
     pip install --upgrade robotframework
-   
     ```
   
   > Install the package __robotframework-seleniumlibrary__ in project interpreter settings of current project on Pycharm.
@@ -80,7 +78,6 @@ RequestsLibrary is used to help in making the HTTP requests to a API.
   > For RequestsLibrary installation, run the below command in command prompt
     ```
     pip install robotframework-requests
-   
     ```
   
   > Install the package __robotframework-requests__ in project interpreter settings of current project on Pycharm.
@@ -116,7 +113,6 @@ __DataDriver__ is used/imported as Library but does not provide keywords which c
   > For Data installation, run the below command in command prompt
     ```
     pip install --upgrade robotframework-datadriver
-   
     ```
   
   > Install the package __robotframework-datadriver__ in project interpreter settings of current project on Pycharm.
@@ -124,7 +120,6 @@ __DataDriver__ is used/imported as Library but does not provide keywords which c
   > For excel file support of xls or xlsx file you need to install the extra XLS or the dependencies. It contains the dependencies of pandas, numpy and xlrd.
     ```
     pip install --upgrade robotframework-datadriver[XLS]
-   
     ```
 
 
@@ -144,7 +139,6 @@ This package is a Robot Framework test library for manipulating JSON object.
   > For robotframework-jsonlibrary installation, run the below command in command prompt
     ```
     pip install -U robotframework-jsonlibrary
-   
     ```
   
   > Install the package __robotframework-jsonlibrary__ in project interpreter settings of current project on Pycharm.
@@ -159,7 +153,6 @@ This package is a Robot Framework parallel test runner used for running the test
   > For robotframework-pabot installation, run the below command in command prompt
     ```
     pip install -U robotframework-pabot
-   
     ```
   
   > Install the package __robotframework-pabot__ in project interpreter settings of current project on Pycharm.
@@ -169,8 +162,7 @@ This package is a Robot Framework parallel test runner used for running the test
   > Following is the command can be used to run 3 processes parallely by giving its directory name alone where these test scripts are stored and also can store the resultant         report files (log.html, output.xml and report.html) in a desired directory
    ```
     pabot --processes 3 --outputdir UI_DEMO/Results UI_DEMO/
-   
-    ```    
+   ```    
 
 
 ---
