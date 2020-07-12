@@ -9,7 +9,9 @@ __Set-Up__
 1. Python 3 interpreter
 2. Pycharm community edition for IDE
 
+
 ---
+
 
 __Automation Framework__
 
@@ -31,7 +33,9 @@ KEYWORD-DRIVEN TESTING is a scripting technique that uses data files to contain 
    
   > Install the package __robotframework__ in project interpreter settings of current project on Pycharm.
 
+
 ---
+
 
 __Applications Used__
 
@@ -41,7 +45,9 @@ In this project, the test scripts were written on the below type of applications
   - __API__ [link](https://robotmetrics.netlify.com/)
   - __Hybrid__ (combination of both UI and API) [UI-link](https://github.com/) and [API-link](https://api.github.com/)
 
+
 ---
+
 
 __Libraries Used__
 
@@ -83,7 +89,9 @@ RequestsLibrary is used to help in making the HTTP requests to a API.
    
 Collections is Robot Framework's standard library that provides a set of keywords for handling Python lists and dictionaries. This library has keywords, for example, for modifying and getting values from lists and dictionaries (e.g. Append To List, Get From Dictionary) and for verifying their contents (e.g. Lists Should Be Equal, Dictionary Should Contain Value)
 
+
 ---
+
 
 __Page Object Model__
 
@@ -91,7 +99,9 @@ In this project, used to create the test scripts based on Page Object Model(POM)
 
 Here all the locators related to the web page and user-defined keywords are created in Resource File. This file is imported to the test file and required keywords are used for the actions to get happened.
 
+
 ---
+
 
 __Data Driven Testing__
 
@@ -116,6 +126,10 @@ __DataDriver__ is used/imported as Library but does not provide keywords which c
     pip install --upgrade robotframework-datadriver[XLS]
    
     ```
+
+
+---
+
 
 __Packages Used__
 
@@ -153,12 +167,14 @@ This package is a Robot Framework parallel test runner used for running the test
  - __Example__
  
   > Following is the command can be used to run 3 processes parallely by giving its directory name alone where these test scripts are stored and also can store the resultant         report files (log.html, output.xml and report.html) in a desired directory
-    ```
+   ```
     pabot --processes 3 --outputdir UI_DEMO/Results UI_DEMO/
    
     ```    
 
+
 ---
+
 
 __Keywords Used__
 
