@@ -209,34 +209,96 @@ Following are different type of waits used in Robot Framework:
  Bydefault the wait time is 0 seconds.
  ```
    set selenium implicit wait 10 seconds
- ``` 
+ ```
  
-      
+__2.__ __Mouse Over__
 
-
-
-
+ Simulates hovering the mouse over the element locator.
+ ```
+   mouse over  link:Cell phones
    
-  
+   click link  link:Cell phones
+ ```
 
+__3.__ __Scrolling__
 
-
-
-   
-   
-   
-   
-   
+ Simulates scrolling on the webpage until particular element is found. Also helps in scrolling to the end of page and to the top of the page.
  
+ Following are examples to show how to use __Execute Javacscript__ keyword for performing the scrolling in different scenarios
+ 
+ > Scroll on webpage until certain element is located where its pixel number is used as a locator.
+   ```
+    execute javascript  window.scrollTo(0,1500)
+   ```
+ > Scroll until end of the webpage
+   ```
+    execute javascript  window.scrollTo(0,document.body.scrollHeight)
+   ```
+ > Scroll until top of the webpage
+   ```
+    execute javascript  window.scrollTo(0,-document.body.scrollHeight)
+   ```
+ > Scroll on webpage until certain element is located by using its locator.
+   ```
+    scroll element into view    xpath://*[@id="content"]/div[2]/div[2]/table[1]/tbody/tr[86]/td[1]/img
+   ```
+   
+
+---
+
+
+__Robot Framework Metrics Report__
+
+Creates awesome HTML (dashboard view) report by parsing robotframework output.xml file
+
+-__How it works__
+
+1. Read output.xml file using robotframework API
+
+2. Get Suite, Test Case , Keyword , Status and Elapsed time values
+
+3. Convert data to html report using Beautifulsoup
+  
+- __Installation__
+  
+  > Install the package __robotframework-metrics__ in project interpreter settings of current project on Pycharm.
+
+-__Execution__
+  
+  Following are the robotmetrics commands used to generate reports in different cases
+  
+  > Case 1: No change in output.xml, log.html file name's and user is in same folder
+   ```
+   robotmetrics
+   ```
+   
+  > Case 2: RobotFramework Metrics Report __metric-timestamp.html__ file will be created in current folder | `-inputpath` if specified
+
+   Note: From v3.1.6 users can specify __custom_report_name__ instead of __metrics-timestamp.html__
+   ```
+   robotmetrics -M regression_metrics.html
+   ```
+  
+  > Case 3: Customize specific custom logo in robotmetrics report by using --logo command line option
+   ```
+   robotmetrics --logo ../Apple-Logo.png -M regression_metrics.html
+   ```
+ 
+-__Help Option__
+  
+  > For more info on command line options use:
+   ```
+   robotmetrics --help
+   ```
+   
+__Embed a file__
+
+There is feasibility to embed a txt file or any other data input file to the report via log.
+
+Instead of just putting a simple text we can also put a HTML Hyperlink.
+
+  ```
+   log   <a href="http://localhost:63342/Training/TestData/WebappData.xlsx">Input Data File<a>    html=True
+   ``
 
   
-
-
-
-
-  
-
-
-   
-   
-    
