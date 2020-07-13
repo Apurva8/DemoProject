@@ -32,7 +32,7 @@ KEYWORD-DRIVEN TESTING is a scripting technique that uses data files to contain 
    
   > Install the package __robotframework__ in project interpreter settings of current project on Pycharm.
 
-
+  
 ---
 
 
@@ -69,6 +69,12 @@ SeleniumLibrary is a web testing library for Robot Framework that utilizes the S
   
   > Add __IntelliBot@seleniumlibrary__ plugin on Pycharm
   
+ - __How to use in project__
+  
+  ```
+    Library SeleniumLibrary
+  ```
+  
 __2.__ __RequestsLibrary__
    
 RequestsLibrary is used to help in making the HTTP requests to a API.
@@ -81,11 +87,22 @@ RequestsLibrary is used to help in making the HTTP requests to a API.
     ```
   
   > Install the package __robotframework-requests__ in project interpreter settings of current project on Pycharm.
+  
+ - __How to use in project__
+  
+  ```
+    Library RequestsLibrary
+  ```
 
  __3.__ __Collections__
    
 Collections is Robot Framework's standard library that provides a set of keywords for handling Python lists and dictionaries. This library has keywords, for example, for modifying and getting values from lists and dictionaries (e.g. Append To List, Get From Dictionary) and for verifying their contents (e.g. Lists Should Be Equal, Dictionary Should Contain Value)
 
+- __How to use in project__
+  
+  ```
+    Library Collections
+  ```
 
 ---
 
@@ -122,6 +139,11 @@ __DataDriver__ is used/imported as Library but does not provide keywords which c
     pip install --upgrade robotframework-datadriver[XLS]
     ```
 
+- __How to use in project__
+  
+  ```
+    Library     DataDriver     file=<<path of the data input file>>  sheet_name=<<sheet name>>
+  ```
 
 ---
 
@@ -157,11 +179,11 @@ This package is a Robot Framework parallel test runner used for running the test
   
   > Install the package __robotframework-pabot__ in project interpreter settings of current project on Pycharm.
   
- - __Example__
+ -  __How to use in project__
  
   > Following is the command can be used to run 3 processes parallely by giving its directory name alone where these test scripts are stored and also can store the resultant         report files (log.html, output.xml and report.html) in a desired directory
    ```
-    pabot --processes 3 --outputdir UI_DEMO/Results UI_DEMO/
+    pabot --processes 3 --outputdir <<path of desired directory where the reports needs to be stored>> <<path of directory where the test scripts exists>>
    ```    
 
 
@@ -176,14 +198,14 @@ __1.__ __Waits__
 
 Following are different type of waits used in Robot Framework:
 
- -__Sleep__
+ - __Sleep__
     
   Whereever we want to wait for sometime, add sleep before the statement. Bydefault the wait time is 0 seconds.
   ```
    sleep 3
   ```
   
- -__Selenium Speed__
+ - __Selenium Speed__
  
   This is used to add delay time for every statement in the test script. Bydefault the delay time is 0 seconds.
   ```
@@ -192,17 +214,17 @@ Following are different type of waits used in Robot Framework:
    get selenium speed
   ``` 
 
--__Selenium Timeout__
+- __Selenium Timeout__
 
  This is used to add maximum time to wait until the given element is appeared on the webpage. Bydefault the maximum timeout is 5 seconds.
  ```
    set selenium timeout 10 seconds
    
-   wait untilpage contains  Register
+   wait until page contains  <<text>>
   ``` 
  This timeout is applicable only for that particular statement.
  
--__Implicit Wait__
+- __Implicit Wait__
 
  This is used to add maximum time to wait until the element got located with the given locator and this time is applicable to all web elements written in the test script.
  
@@ -215,9 +237,9 @@ __2.__ __Mouse Over__
 
  Simulates hovering the mouse over the element locator.
  ```
-   mouse over  link:Cell phones
+   mouse over  link:<<locator>>
    
-   click link  link:Cell phones
+   click link  link:<<locator>>
  ```
 
 __3.__ __Scrolling__
@@ -240,7 +262,7 @@ __3.__ __Scrolling__
    ```
  > Scroll on webpage until certain element is located by using its locator.
    ```
-    scroll element into view    xpath://*[@id="content"]/div[2]/div[2]/table[1]/tbody/tr[86]/td[1]/img
+    scroll element into view    xpath:<<locator>>
    ```
    
 
@@ -251,7 +273,7 @@ __Robot Framework Metrics Report__
 
 Creates awesome HTML (dashboard view) report by parsing robotframework output.xml file
 
--__How it works__
+- __How it works__
 
 1. Read output.xml file using robotframework API
 
@@ -263,7 +285,7 @@ Creates awesome HTML (dashboard view) report by parsing robotframework output.xm
   
   > Install the package __robotframework-metrics__ in project interpreter settings of current project on Pycharm.
 
--__Execution__
+- __How to use in project__
   
   Following are the robotmetrics commands used to generate reports in different cases
   
@@ -284,13 +306,16 @@ Creates awesome HTML (dashboard view) report by parsing robotframework output.xm
    robotmetrics --logo ../Apple-Logo.png -M regression_metrics.html
    ```
  
--__Help Option__
+- __Help Option__
   
   > For more info on command line options use:
    ```
    robotmetrics --help
    ```
-   
+ 
+ ---
+ 
+ 
 __Embed a file__
 
 There is feasibility to embed a txt file or any other data input file to the report via log.
@@ -298,7 +323,7 @@ There is feasibility to embed a txt file or any other data input file to the rep
 Instead of just putting a simple text we can also put a HTML Hyperlink.
 
   ```
-   log   <a href="http://localhost:63342/Training/TestData/WebappData.xlsx">Input Data File<a>    html=True
-   ``
+   log   <a href="file://path of the data input file">Input Data File<a>    html=True
+   ```
 
   
