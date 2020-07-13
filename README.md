@@ -168,9 +168,21 @@ This package is a Robot Framework parallel test runner used for running the test
 ---
 
 
-__Keywords Used__
+__Actions Used__
 
-In this project
+Below were some actions used in the project
+
+__1.__ __Waits__
+
+Following are different type of waits used in Robot Framework:
+
+  -__sleep__
+    
+    Whereever we want to wait for sometime, add sleep before the statement.
+    ```
+    sleep 3
+   ```
+    
 
     
  
