@@ -176,15 +176,40 @@ __1.__ __Waits__
 
 Following are different type of waits used in Robot Framework:
 
-  -__sleep__
+ -__Sleep__
     
-    Whereever we want to wait for sometime, add sleep before the statement.
-    ```
-    sleep 3
-   ```
-    
+  Whereever we want to wait for sometime, add sleep before the statement. Bydefault the wait time is 0 seconds.
+  ```
+   sleep 3
+  ```
+  
+ -__Selenium Speed__
+ 
+  This is used to add delay time for every statement in the test script. Bydefault the delay time is 0 seconds.
+  ```
+   set selenium speed 3 seconds
+   
+   get selenium speed
+  ``` 
 
-    
+-__Selenium Timeout__
+
+ This is used to add maximum time to wait until the given element is appeared on the webpage. Bydefault the maximum timeout is 5 seconds.
+ ```
+   set selenium timeout 10 seconds
+   
+   wait untilpage contains  Register
+  ``` 
+ This timeout is applicable only for that particular statement.
+ 
+-__Implicit Wait__
+
+ This is used to add maximum time to wait until the element got located with the given locator and this time is applicable to all web elements written in the test script.
+ 
+ Bydefault the wait time is 0 seconds.
+ ```
+   set selenium implicit wait 10 seconds
+ ``` 
  
       
 
