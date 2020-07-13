@@ -1,6 +1,6 @@
 # DemoProject
 
-In this project, test scripts were written to automate some testing scenarios related to real life actions on different type of applications using __Robot Framework__.
+In this project, test scripts were written to automate some testing scenarios related to real time actions on different type of applications using __Robot Framework__.
 
 ---
 
