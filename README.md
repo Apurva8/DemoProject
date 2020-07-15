@@ -318,14 +318,24 @@ Creates awesome HTML (dashboard view) report by parsing robotframework output.xm
  
 __Embed a file__
 
-There is feasibility to embed a txt file or any other data input file to the report via log.
+There is feasibility to embed links in robot framework log by different ways
 
-Instead of just putting a simple text we can also put a HTML Hyperlink.
+__1. Adding links via log__
+
+  Instead of just putting a simple text we can also put a HTML Hyperlink.
 
   ```
    log   <a href="file://path of the data input file">Input Data File<a>    html=True
    ```
+__2. Adding links via free test suite metadata__
 
+  We can use metadata in your test suites. Those metadata can contains external links and will add those links in output.xml and report.html files.
+  
+  ```
+   *** Settings ***
+   Metadata   Input Data File    <<file://path of the data input file>>
+   ```
+  
 ---
 
 
