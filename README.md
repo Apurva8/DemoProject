@@ -326,4 +326,11 @@ Instead of just putting a simple text we can also put a HTML Hyperlink.
    log   <a href="file://path of the data input file">Input Data File<a>    html=True
    ```
 
+---
+
+
+__Undisposition [Racle fork]__
+
+Removes Content-Disposition: attachment HTTP header to allow view files instead of downloading them. Extension icon acts as toggle.
+
   
