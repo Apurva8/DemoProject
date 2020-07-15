@@ -39,6 +39,8 @@ Page title check
 Search Item
     [Arguments]  ${category}    ${item}
     mouse over  link:${category}
+    set selenium timeout    15 seconds
+    wait until page contains    ${item}
     mouse over  link:${item}
     click link  link:${item}
     title should be     nopCommerce demo store. ${item}
@@ -75,7 +77,7 @@ Register
     [Arguments]    ${email}      ${password}    ${first}    ${last}     ${day}   ${month}    ${year}
     click element   xpath://input[@class="button-1 register-button"]
     click element   id:gender-female
-    set selenium speed  1 seconds
+    #set selenium speed  1 seconds
     input text  id:FirstName    ${first}
     input text  id:LastName     ${last}
     select from list by label   DateOfBirthDay    ${day}
