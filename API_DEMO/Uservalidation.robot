@@ -1,5 +1,4 @@
 *** Settings ***
-Library  SeleniumLibrary
 Metadata   Input Data File    http://localhost:63342/Training/TestData/UsersData.xlsx
 Resource    ../API_DEMO/Resources.robot
 Library     DataDriver     file=../TestData/UsersData.xlsx  sheet_name=Users
