@@ -337,10 +337,4 @@ __2. Adding links via free test suite metadata__
    ```
   
 ---
-
-
-__Undisposition [Racle fork]__
-
-Removes Content-Disposition: attachment HTTP header to allow view files instead of downloading them. Extension icon acts as toggle.
-
   
