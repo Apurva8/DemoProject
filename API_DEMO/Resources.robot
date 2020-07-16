@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation  This is a Resource file
-Library  SeleniumLibrary
 Library  RequestsLibrary
 
 *** Variables ***
