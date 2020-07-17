@@ -1,0 +1,4 @@
+# Requirements needed when generating releases. 
+selenium
+chromedriver-autoinstaller
+loguru
